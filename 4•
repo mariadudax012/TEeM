@@ -1,0 +1,16 @@
+entrada = input("Digite o preço do produto: ").strip()
+
+if entrada == "":
+    print("Erro: preço não informado.")
+else:
+    try:
+        preco = float(entrada.replace(",", "."))
+
+        if preco < 0:
+            print("Erro: o preço não pode ser negativo.")
+        else:
+            quantidade = int(input("Digite a quantidade: "))
+            total = preco * quantidade
+            print(f"Valor total: R$ {total:.2f}")
+    except ValueError:
+        print("Erro: digite um valor numérico.")
