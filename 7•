@@ -1,0 +1,8 @@
+cpf = input("Digite o CPF: ").strip()
+
+cpf_limpo = cpf.replace(".", "").replace("-", "").replace(" ", "")
+
+if len(cpf_limpo) == 11 and cpf_limpo.isdigit():
+    print("Identificador válido estruturalmente.")
+else:
+    print("Identificador inválido.")
