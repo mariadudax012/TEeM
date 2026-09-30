@@ -1,0 +1,19 @@
+entrada = input("Digite sua idade: ").strip()
+
+if entrada == "":
+    print("Erro: a idade não pode ficar vazia.")
+else:
+    try:
+        idade = int(entrada)
+
+        if idade < 0:
+            print("Erro: a idade não pode ser negativa.")
+        else:
+            print("Idade válida:", idade)
+
+            if idade >= 18:
+                print("Pode participar da atividade.")
+            else:
+                print("Não pode participar da atividade.")
+    except ValueError:
+        print("Erro: digite uma idade numérica.")
