@@ -1,0 +1,27 @@
+def validar_cadastro(nome, idade, curso, ano):
+    if nome.strip() == "":
+        return "Nome não pode ficar vazio."
+
+    if idade < 0:
+        return "Idade não pode ser negativa."
+
+    if curso.strip() == "":
+        return "Curso não pode ficar vazio."
+
+    if ano < 1 or ano > 3:
+        return "Ano inválido."
+
+    return "Cadastro válido."
+
+
+testes = [
+    ("Ana", 16, "Informática", 1),
+    ("Bruno", 17, "Informática", 2),
+    ("Carlos", 18, "Informática", 3),
+    ("Daniel", -1, "Informática", 1),
+    ("Eva", 17, "", 2),
+    ("Fábio", 16, "Informática", 5)
+]
+
+for cadastro in testes:
+    print(validar_cadastro(*cadastro))
