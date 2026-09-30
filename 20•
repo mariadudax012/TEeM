@@ -1,0 +1,24 @@
+def cadastrar_aluno():
+    nome = input("Nome: ")
+    idade = int(input("Idade: "))
+
+    nota1 = float(input("Nota 1: "))
+    nota2 = float(input("Nota 2: "))
+    nota3 = float(input("Nota 3: "))
+
+    media = (nota1 + nota2 + nota3) / 2
+
+    if media >= 7:
+        situacao = "Aprovado"
+    elif media > 5:
+        situacao = "Recuperação"
+    else:
+        situacao = "Reprovado"
+
+    print("Aluno:", nome)
+    print("Idade:", idade)
+    print("Média:", media)
+    print("Situação:", situacao)
+
+
+cadastrar_aluno()
