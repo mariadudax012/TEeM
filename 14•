@@ -1,0 +1,15 @@
+entrada = input("Digite o preço: ").strip()
+
+if entrada == "":
+    print("Erro: o preço não foi informado.")
+else:
+    try:
+        preco = float(entrada.replace(",", "."))
+
+        if preco < 0:
+            print("Erro: preço inválido.")
+        else:
+            print(f"Preço informado: R$ {preco:.2f}")
+
+    except ValueError:
+        print("Erro: digite um valor numérico.")
