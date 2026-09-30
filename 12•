@@ -1,0 +1,17 @@
+nomes = ["Ana", "Bruno", "Carlos", "Ana", "Daniel", "Bruno"]
+
+vistos = set()
+duplicados = set()
+
+for nome in nomes:
+    if nome in vistos:
+        duplicados.add(nome)
+    else:
+        vistos.add(nome)
+
+if duplicados:
+    print("Nomes duplicados:")
+    for nome in duplicados:
+        print(nome)
+else:
+    print("Não existem nomes duplicados.")
