@@ -1,0 +1,32 @@
+def verificar_usuario(idade, renda, cadastrado):
+    if idade < 18:
+        return "Menor de idade."
+
+    elif renda < 1500:
+        return "Maior de idade com renda baixa."
+
+    elif cadastrado:
+        return "Maior de idade, renda suficiente e cadastro ativo."
+
+    else:
+        return "Maior de idade, renda suficiente, mas sem cadastro."
+
+
+testes = [
+    (16, 1000, False),
+    (20, 1000, False),
+    (20, 2000, True),
+    (20, 2000, False)
+]
+
+for idade, renda, cadastrado in testes:
+    resultado = verificar_usuario(idade, renda, cadastrado)
+
+    print(
+        "Entrada:",
+        idade,
+        renda,
+        cadastrado,
+        "→ Resultado:",
+        resultado
+    )
